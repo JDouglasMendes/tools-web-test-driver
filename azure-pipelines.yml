@@ -3,7 +3,7 @@
   inputs:
     command: 'restore'
     projects: '**/*.csproj'
-    feedsToUse: 'select''
+    feedsToUse: 'select'
   inputs:
     command: 'build'
     projects: '- task: DotNetCoreCLI@2
