@@ -27,7 +27,7 @@ steps:
     projects: '**/*.sln'
 - task: PublishCodeCoverageResults@1
   inputs:
-    codeCoverageTool: 'JaCoCo'
+    codeCoverageTool: 'Cobertura'
     summaryFileLocation: '$(Build.SourcesDirectory)/TestResults/Coverage/coverage.cobertura.xml'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
