@@ -15,13 +15,16 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
+    projects: '**/*.sln'
     feedsToUse: 'select'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
+    projects: '**/*.sln'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
+    projects: '**/*.sln'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
