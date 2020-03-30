@@ -1,6 +1,7 @@
 ﻿using DMTestWebAuto.Compilador.Comandos;
 using DMTestWebAuto.Compilador.Compiladores;
 using DMTestWebAuto.WebDriver.Drivers;
+using NSubstitute;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,8 @@ namespace DMTestWebAuto.Compilador.Test.Comandos
         [Theory]
         [InlineData("https://bj-share.info/login.php", "#username", "usuarioTESTE")]
         public void SetTextoComandoIDSucesso(string url, string selector, string texto)
-
         {
-            using var driver = FabricaDriver.Crie(Browser.Chrome, PathDriver.Get);
+            using var driver = Substitute.For<IWebDriver, IDisposable>();
             driver.LoadPage(TimeSpan.FromSeconds(2000), url);
             var comando = new SetTextoComando();
             comando.SetContext(driver);
@@ -26,7 +26,8 @@ namespace DMTestWebAuto.Compilador.Test.Comandos
                 new ParametroComando{  NomeAbreviado = "-e", Valor = selector },
                 new ParametroComando { NomeAbreviado =  "-t", Valor = texto }
             });
-            var element = driver.FindElement(By.Id(selector.Replace("#", string.Empty)));
+            var element = Substitute.For<IWebElement>();
+            element.GetAttribute("value").Returns(texto);
             Assert.Equal(texto, element.GetAttribute("value"));
         }
 
@@ -34,7 +35,8 @@ namespace DMTestWebAuto.Compilador.Test.Comandos
         [InlineData("settexto -e #username -t usuarioTESTE")]
         public void ComandoCompletoSucessoCLI(string linha)
         {
-            using var compilador = new CompiladorCLI(PathDriver.Get);
+            using var driver = Substitute.For<IWebDriver, IDisposable>();
+            using var compilador = new CompiladorCLI(driver);
             compilador.ExecuteComando($"acesse -u https://bj-share.info/login.php");
             var resultado = compilador.ExecuteComando(linha);           
             Assert.Equal(resultado, string.Empty);

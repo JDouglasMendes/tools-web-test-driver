@@ -1,5 +1,6 @@
 ﻿using DMTestWebAuto.WebDriver.Comandos;
 using DMTestWebAuto.WebDriver.Drivers;
+using NSubstitute;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace DMTestWebAuto.WebDriver.Test
         [InlineData("https://www.infoq.com/", "search", "valor")]
         public void NovoTextoPorClasse(string url, string classe, string valor)
         {
-            using var driver = FabricaDriver.Crie(Browser.Chrome, PathDriver.Get);
+            using var driver = Substitute.For<IWebDriver, IDisposable>();
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(2000);          
             driver.Navigate().GoToUrl(url);

@@ -1,5 +1,7 @@
 ﻿using DMTestWebAuto.WebDriver.Comandos;
 using DMTestWebAuto.WebDriver.Drivers;
+using NSubstitute;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,7 +16,7 @@ namespace DMTestWebAuto.WebDriver.Test
         [InlineData(2000)]
         public void Aguarde(int tempo)
         {
-            using var driver = FabricaDriver.Crie(Browser.Chrome, PathDriver.Get);
+            using var driver = Substitute.For<IWebDriver, IDisposable>();
             var aguarde = new AguardeComandoDriver();
             var sw = new Stopwatch();
             sw.Start();

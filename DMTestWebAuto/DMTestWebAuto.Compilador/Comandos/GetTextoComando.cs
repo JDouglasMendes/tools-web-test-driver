@@ -19,7 +19,7 @@ namespace DMTestWebAuto.Compilador.Comandos
             var elemento = new ElementoPorSeletor(_webDriver).GetElemento(token["-e"].Valor);
             return new GetComandoDriver().Execute(elemento.Seletor(), token["-a"]?.Valor);
         }
-
+              
         public List<ParametroComando> GetParamentros(string linhaDoComando)
         {
             return BaseGetParametros(linhaDoComando);

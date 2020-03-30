@@ -1,6 +1,0 @@
-{
-  "Selenium": {
-    "CaminhoDriverChrome": "D:\\Projetos\\DMTestWebAuto",
-    "UrlTelaConversaoDistancias": "http://localhost:51107/"
-  }
-}

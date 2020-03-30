@@ -12,10 +12,21 @@ namespace DMTestWebAuto.Compilador.Compiladores
     {
         public IWebDriver WebDriver { get; }
         private List<string> _tokens;
-        public CompiladorCLI(string pathDriver)
+
+        public CompiladorCLI(string pathDriver) : this()
         {
             WebDriver = FabricaDriver.Crie(Browser.Chrome, pathDriver);
+            FabricaComando.Singleton.SetAllContext(WebDriver);
+        }
+        private CompiladorCLI()
+        {
             _tokens = new List<string>();
+            
+        }
+
+        public CompiladorCLI(IWebDriver webDriver) : this()
+        {
+            WebDriver = webDriver;
             FabricaComando.Singleton.SetAllContext(WebDriver);
         }
 
