@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DMTestWebAuto.WebDriver", "DMTestWebAuto.WebDriver\DMTestWebAuto.WebDriver.csproj", "{101AE079-0879-4ADD-881F-F61AD5F893AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DMTestWebAuto.CLI", "DMTestWebAuto.CLI\DMTestWebAuto.CLI.csproj", "{11199657-2A50-46E5-9FE8-1D06247273D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cenarios", "cenarios", "{564620AA-84E2-475B-8BFD-1E14D26F9AFA}"
+	ProjectSection(SolutionItems) = preProject
+		cenario1.dmtest = cenario1.dmtest
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMTestWebAuto.Compilador", "DMTestWebAuto.Compilador\DMTestWebAuto.Compilador.csproj", "{F9640920-91EC-4C19-9175-DEC7DDA97660}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DMTestWebAuto.WebDriver.Test", "DMTestWebAuto.WebDriver.Test\DMTestWebAuto.WebDriver.Test.csproj", "{6EE64E98-5456-4549-A82F-B660DA96A92E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E0E23BA2-D24B-4B02-B8A4-59C0F41B9B0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMTestWebAuto.Compilador.Test", "DMTestWebAuto.Compilador.Test\DMTestWebAuto.Compilador.Test.csproj", "{C7228B81-CD9E-4B5E-8789-52DC2AD6FD00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{101AE079-0879-4ADD-881F-F61AD5F893AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{101AE079-0879-4ADD-881F-F61AD5F893AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{101AE079-0879-4ADD-881F-F61AD5F893AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{101AE079-0879-4ADD-881F-F61AD5F893AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11199657-2A50-46E5-9FE8-1D06247273D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11199657-2A50-46E5-9FE8-1D06247273D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11199657-2A50-46E5-9FE8-1D06247273D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11199657-2A50-46E5-9FE8-1D06247273D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9640920-91EC-4C19-9175-DEC7DDA97660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9640920-91EC-4C19-9175-DEC7DDA97660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9640920-91EC-4C19-9175-DEC7DDA97660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9640920-91EC-4C19-9175-DEC7DDA97660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE64E98-5456-4549-A82F-B660DA96A92E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE64E98-5456-4549-A82F-B660DA96A92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE64E98-5456-4549-A82F-B660DA96A92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE64E98-5456-4549-A82F-B660DA96A92E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7228B81-CD9E-4B5E-8789-52DC2AD6FD00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7228B81-CD9E-4B5E-8789-52DC2AD6FD00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7228B81-CD9E-4B5E-8789-52DC2AD6FD00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7228B81-CD9E-4B5E-8789-52DC2AD6FD00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6EE64E98-5456-4549-A82F-B660DA96A92E} = {E0E23BA2-D24B-4B02-B8A4-59C0F41B9B0E}
+		{C7228B81-CD9E-4B5E-8789-52DC2AD6FD00} = {E0E23BA2-D24B-4B02-B8A4-59C0F41B9B0E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6454252-EC96-473E-8D2B-DAA7989F0CFB}
+	EndGlobalSection
+EndGlobal

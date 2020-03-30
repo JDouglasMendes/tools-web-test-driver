@@ -1,0 +1,32 @@
+//#-Por id
+//.-Por classe
+//
+[ACESSE()]
+[ID() | CLASSE()]
+	[.NOVOTEXTO() || .TEXTO() || .SUBMIT() || .CLICK()]
+
+[AGUARDE()]
+
+//Logar gmail
+[ACESSE(gmail.com)]
+[CLASSE(JDAKTe ibdqA W7Aapd zpCp3 SmR8).CLICK().AGUARDE(2000)]
+[CLASSE(whsOnd zHQkBf).NOVOTEXTO(SENHAEMAIL)]
+[CLASSE(RveJvd snByac).CLICK()]
+[AGUARDE(3000)]
+//[VERIFIQUE_IGUALDADE(ID().ANTES().DEPOIS()]
+[VERIFIQUE_SE_EXISTE(ID())]
+
+acesse -url ""
+click -elemento| -e ".classe" "#id""
+settexto -texto "novotexto"| -t "novotexto" -elemento| -e ".classe" "#id""
+gettexto -elemento| -e ".classe" "#id"" -a | atributo "value"
+aguarde -tempo "10" | -t "10"
+existe -elemento| -e ".classe" "#id""
+assert igualdade -""
+
+//Colocar cada validação espefica por comando;
+//1ª - Validação Sintatica
+//2ª - Extração de Comandos
+//3ª - Validação Especificas dos Comandos.
+//4ª - Montar fila de Execução dos comandos.
+//5ª - Executar Comandos
