@@ -15,7 +15,11 @@ namespace DMTestWebAuto.Compilador.Comandos
 
         public string Execute(List<ParametroComando> parametros)
         {
-            new AcesseComandoDriver(_webDriver).Execute(new Comando().AdicioneParamentro(parametros.FirstOrDefault().Valor));
+            var url = parametros.FirstOrDefault().Valor;
+            if (!url.ToLower().StartsWith("http") && !url.ToLower().StartsWith("https"))
+                url = "http://" + url;
+
+            new AcesseComandoDriver(_webDriver).Execute(new Comando().AdicioneParamentro(url));
             return $"Acessando: {_webDriver.Url}";
         }
 
