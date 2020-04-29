@@ -40,5 +40,17 @@ namespace DMTestWebAuto.Compilador.Test.Comandos
             var resultado = compilador.ExecuteComando(linha);
             Assert.Contains(assert, resultado);
         }
+
+        [Theory]
+        [InlineData("acesse -u www.google.com", "Acessando: http://www.google.com", "http://www.google.com")]
+        public void ComandoCompletoSucessoCLISemHttp(string linha, string assert, string url)
+        {
+            using var driver = Substitute.For<IWebDriver, IDisposable>();
+            driver.Url = url;
+            driver.LoadPage(TimeSpan.FromSeconds(2000), url);
+            using var compilador = new CompiladorCLI(driver);
+            var resultado = compilador.ExecuteComando(linha);
+            Assert.Contains(assert, resultado);
+        }
     }
 }
