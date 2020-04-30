@@ -11,5 +11,6 @@ namespace DMTestWebAuto.CLI
             using var cli = new UICLI();
             cli.ExecuteComandos();
         }
+        
     }
 }
