@@ -24,7 +24,12 @@ namespace DMTestWebAuto.WebDriver.Drivers
 
                     break;
                 case Browser.Chrome:
-                    webDriver = new ChromeDriver(pathDriver);
+                    var service1 = ChromeDriverService.CreateDefaultService(pathDriver);
+                    service1.HideCommandPromptWindow = true;                    
+                    var options = new ChromeOptions();
+                    options.AddArgument("disable-logging");
+                    webDriver = new ChromeDriver(service1, options);                    
+                    webDriver.Manage().Window.Maximize();  
                     break;
             }
 

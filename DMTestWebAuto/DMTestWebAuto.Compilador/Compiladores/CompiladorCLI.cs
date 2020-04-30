@@ -20,8 +20,7 @@ namespace DMTestWebAuto.Compilador.Compiladores
         }
         private CompiladorCLI()
         {
-            _tokens = new List<string>();
-            
+            _tokens = new List<string>();            
         }
 
         public CompiladorCLI(IWebDriver webDriver) : this()
